@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./components/Header";
+import Form from "./components/Form";
+import rates from "./Rates/rates";
+import { useState } from "react";
 
 function App() {
+  const [firstDevice, setFirstDevice] = useState(0);
+  const [secondDevice, setSecondDevice] = useState(0);
+  const [allDevice, setAllDevice] = useState("");
+  // console.log(firstDevice);
+  // console.log(secondDevice);
+
+  // console.log(arrayDevice);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <section>
+        <Header title="EUR to USD" />
+      </section>
+      <Form
+        firstDevice={firstDevice}
+        setFirstDevice={setFirstDevice}
+        secondDevice={secondDevice}
+        setSecondDevice={setSecondDevice}
+        allDevice={allDevice}
+        setAllDevice={setAllDevice}
+      />
+    </>
   );
 }
 
