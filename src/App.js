@@ -8,6 +8,8 @@ function App() {
   const [firstDevice, setFirstDevice] = useState(0);
   const [secondDevice, setSecondDevice] = useState(0);
   const [allDevice, setAllDevice] = useState("");
+  const [firstOption, setFirstOption] = useState("1234");
+  const [secondOption, setSecondOption] = useState("");
   // console.log(firstDevice);
   // console.log(secondDevice);
 
@@ -25,6 +27,10 @@ function App() {
         setSecondDevice={setSecondDevice}
         allDevice={allDevice}
         setAllDevice={setAllDevice}
+        firstOption={firstOption}
+        setFirstOption={setFirstOption}
+        secondOption={secondOption}
+        setSecondOption={setSecondOption}
       />
     </>
   );

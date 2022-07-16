@@ -7,8 +7,18 @@ const Form = ({
   setSecondDevice,
   allDevice,
   setAllDevice,
+  firstOption,
+  setFirstOption,
+  secondOption,
+  setSecondOption,
 }) => {
   const arrayDevice = Object.keys(rates);
+  // console.log(arrayDevice);
+
+  for (let i = 0; i < arrayDevice.length; i++) {
+    let key = arrayDevice[i];
+    console.log(key);
+  }
 
   const changeDevice = (event) => {
     event.preventDefault();
@@ -19,6 +29,8 @@ const Form = ({
     event.preventDefault();
     setFirstDevice(secondDevice * (1 / rates.USD));
   };
+
+  // console.log(firstOption);
 
   return (
     <form onSubmit={changeDevice}>
@@ -32,17 +44,22 @@ const Form = ({
             onChange={(event) => setFirstDevice(event.target.value)}
           />
           <span>
-            {/* {arrayDevice.map((element) => {
-              return (
-                <select className="select" placeholder="EUR">
-                  <option value={element}>{element}</option>
-                  <option value={element}>{element}</option>
-                </select>
-              );
-            })} */}
+            {/* {arrayDevice.map((element, index) => {
+              return ( */}
             <select className="select" placeholder="EUR">
-              <option value="EUR">EUR</option>
-              <option value="USD">USD</option>
+              {arrayDevice.map((element, index) => {
+                return (
+                  <option
+                    value={element}
+                    key={index}
+                    onChange={() => {
+                      setFirstOption(arrayDevice.element);
+                    }}
+                  >
+                    {element}
+                  </option>
+                );
+              })}
             </select>
           </span>
         </div>
@@ -65,8 +82,19 @@ const Form = ({
           <span>
             {" "}
             <select className="select" placeholder="EUR">
-              <option value="EUR">EUR</option>
-              <option value="USD">USD</option>
+              {arrayDevice.map((element, index) => {
+                return (
+                  <option
+                    key={index}
+                    onChange={() => {
+                      setSecondOption(arrayDevice.element);
+                    }}
+                    value={element}
+                  >
+                    {element}
+                  </option>
+                );
+              })}
             </select>
           </span>
         </div>
