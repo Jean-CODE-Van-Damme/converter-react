@@ -8,8 +8,8 @@ function App() {
   const [firstDevice, setFirstDevice] = useState(0);
   const [secondDevice, setSecondDevice] = useState(0);
   const [allDevice, setAllDevice] = useState("");
-  const [firstOption, setFirstOption] = useState("1234");
-  const [secondOption, setSecondOption] = useState("");
+  const [firstOption, setFirstOption] = useState("EUR");
+  const [secondOption, setSecondOption] = useState("USD");
   // console.log(firstDevice);
   // console.log(secondDevice);
 
@@ -17,8 +17,8 @@ function App() {
 
   return (
     <>
-      <section>
-        <Header title="EUR to USD" />
+      <section className="big-div">
+        <Header title="Currency Converter" />
       </section>
       <Form
         firstDevice={firstDevice}

@@ -1,11 +1,23 @@
-header {
+.big-div {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 150px;
   /* border: 2px black solid; */
-  font-size: 3rem;
+  font-size: 2rem;
   width: 100%;
+  margin-bottom: 50px;
+}
+
+header span {
+  font-size: 2.5rem;
 }
 
 h1 {
@@ -18,7 +30,7 @@ h1 {
   justify-content: space-between;
   /* border: 2px red solid; */
   width: 80%;
-  height: 300px;
+  height: 500px;
   align-items: center;
   margin: 0 auto;
 }
@@ -27,19 +39,22 @@ h1 {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 70%;
+  width: 90%;
+  height: 500px;
   height: 40%;
   /* border: 2px blue solid; */
+  /* margin-bottom: 50px; */
 }
 
 .change-zone input {
   width: 50%;
-  height: 80%;
+  height: 60%;
   border-radius: 10px;
-  background-color: #eeeeee;
+  background-color: black;
   padding: 10px;
   box-sizing: border-box;
   font-size: 1.5rem;
+  color: white;
 }
 
 .change-zone span {
@@ -50,25 +65,33 @@ h1 {
   width: 30%;
   height: 70%;
   /* border: 2px red solid; */
+  border-radius: 10px;
 }
 
 .select {
-  /* background-color: gold; */
-  width: 80%;
-  height: 80%;
+  background-color: rgb(211, 210, 235);
+  width: 100%;
+  height: 50%;
+  color: black;
+  font-size: 1.2rem;
 }
 
 .button {
   /* border: 2px green solid; */
-  width: 50%;
+  width: 80%;
+  height: 15%;
   display: flex;
   justify-content: center;
+  margin: 40px;
 }
 
 .button button {
-  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 50px;
   margin-right: 10px;
 }
 
