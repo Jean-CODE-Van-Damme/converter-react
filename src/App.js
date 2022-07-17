@@ -1,7 +1,6 @@
 import "./App.css";
 import Header from "./components/Header";
 import Form from "./components/Form";
-import rates from "./Rates/rates";
 import { useState } from "react";
 
 function App() {

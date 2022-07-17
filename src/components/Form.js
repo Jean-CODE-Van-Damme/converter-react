@@ -13,10 +13,6 @@ const Form = ({
   const arrayDevice = Object.keys(rates);
   // console.log(arrayDevice);
 
-  for (let i = 0; i < arrayDevice.length; i++) {
-    let key = arrayDevice[i];
-    // console.log(key);
-  }
   // formule de base de conversion
   //(montant * devise finale) / devise de base
 
